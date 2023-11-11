@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head class="menu">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_sesion.css">
+    <script src="https://kit.fontawesome.com/27010df775.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/lordicon-1.2.0.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>TodoSobrePelis Registro</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div id="logo">
+                    <li><a id="camara" href="index_main.html"><lord-icon src="https://cdn.lordicon.com/hdublzcw.json" trigger="hover" style="width:80px;height:80px"></lord-icon></a></li>
+                    <li><a href="index_main.html"><h5 id="nmbpag">Todo sobre Pelis</h5></a></li>
+                </div>
+                <div>
+                    <li><i class="fa-brands fa-facebook fa-beat"></i></li>
+                    <li><i class="fa-brands fa-instagram fa-beat "></i></li>
+                    <li><i class="fa-brands fa-tiktok fa-beat"></i></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div id="encabezado1">
+        <h2>Nuestras reseñas</h2>
+    </div>
+    <section>
+        <div class="container">
+            <form class="form-inline">
+                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                    <option selected>Escoje...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <button type="submit" id="escoger" class="btn btn-primary my-1">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="cont_table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Reseña 1</th>
+                </tr>
+            </thead>
+            <tbody>
+    <?php
+    
+    while ($datos2 = mysqli_fetch_array($query_resena)){
+        $titulo = $datos['titulo'];
+        $contenido = $datos['contenido'];
+
+        $query_id_resena = mysqli_query($conexion, "SELECT * FROM resena
+        WHERE titulo = $titulo);
+
+        }
+
+        echo '
+        <tr>
+            <td>'.$titulo.'</td>
+            <td>$ '.$contenido.'</td>
+            
+        </tr>';
+
+    }
+    
+    ?>
+            </tbody>
+        </table>
+    </div>
+
+    <footer id="contacto">
+        <div class="inffoot">
+            <ul>
+                <h3>CONTACTO</h3>
+                <li>+57 310 576 02359</li>
+                <li>todosobrepelis@gmail.com</li>
+                <li><p id="copy">&copy; 2023 TodoSobrePelis</p></li>
+            </ul>
+        </div>
+                
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

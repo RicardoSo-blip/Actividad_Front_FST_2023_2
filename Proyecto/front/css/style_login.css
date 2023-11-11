@@ -1,0 +1,72 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../img/background1.jpg);  
+}
+header {
+    background: linear-gradient(to right, rgba(52, 152, 219, 0), rgba(44, 62, 80, 0));
+    color: #fff;
+    padding: 1em 0;    
+}
+nav ul {
+    list-style: none;
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+nav a:hover{
+    color: black;
+}
+
+#camara{
+    padding-left: 40px;;
+}
+
+#nmbpag{
+    color: black;;
+}
+section{
+    margin-top: 100px;
+}
+#encabezado{ 
+    text-align: center;
+    margin-top: 50px;
+}
+
+#nmblabel{
+    font-weight: bold;
+}
+
+#ingr{
+    margin-top: 20px;
+    background-color: black;
+    border-color: black;
+    border-radius: 10%;
+    font-weight: bold;
+    color: white;
+}
+#ingr:hover{
+    background-color:   rgb(231, 225, 225);
+    color: black;
+    font-weight: bold;
+}
+footer {
+    background: linear-gradient(to right, rgba(52, 152, 219, 0), rgba(44, 62, 80, 0));
+    color: black;
+    text-align: center;
+    padding: 1em 0;
+    padding-top: 200px;
+    margin-left: 225px;
+    position: relative;
+    bottom: 0;
+    width: 70%;
+    font-weight: bold;
+}
+
+footer ul{
+    list-style: none;
+}
+
